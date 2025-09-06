@@ -1,11 +1,11 @@
-
+/* ----------- Reset Básico ----------- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ----------- body ----------- */
+/* ----------- Body ----------- */
 body {
     font-family: "Roboto", Arial, sans-serif;
     line-height: 1.6;
@@ -20,6 +20,8 @@ body {
 header {
     text-align: center;
     margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    /* mejora separación */
 }
 
 #course-title {
@@ -41,6 +43,8 @@ nav a {
     color: #0056b3;
     font-weight: bold;
     transition: color 0.3s ease;
+    padding: 0.3rem 0.5rem;
+    /* mejora click/tap */
 }
 
 nav a:hover {
@@ -66,6 +70,14 @@ h1 {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     padding: 1rem;
     text-align: center;
+    margin-bottom: 1rem;
+    /* separación entre tarjetas */
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .card img {
@@ -73,6 +85,11 @@ h1 {
     height: auto;
     margin-bottom: 1rem;
     border-radius: 6px;
+}
+
+h2 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
 }
 
 /* ----------- Footer ----------- */
