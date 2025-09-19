@@ -4,63 +4,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131 – Dynamic Web Fundamentals – Sebastian Sosa</title>
-    <meta name="description" content="WDD 131 – Fundamentals of Dynamic Web Development. Sebastián Sosa's website with links to course materials, projects, and study resources.">
-    <meta name="author" content="Juan Diego Sebastian Sosa">
-    <!--- google font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <!-- ccs and js -->
+    <title>WDD 131 – Dynamic Web Fundamentals – Sebastián Sosa</title>
+    <meta name="description"
+        content="WDD 131 – Fundamentals of Dynamic Web Development. Sebastián Sosa's website with links to course materials, projects, and study resources.">
+    <meta name="author" content="Juan Diego Sebastián Sosa">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/base.css">
     <script src="scripts/getdates.js" defer></script>
-
-    
 </head>
 
 <body>
     <header>
-        <span id="course-title"> WDD 131 – Dynamic Web Fundamentals</span>
-        <nav>
-            <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
-            <a href="https://byupw.instructure.com/" target="_blank">Canvas</a>
-            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/37.6-7" target="_blank">Favorite Scripture</a>
-            <a href="#">Final Project</a>
-        </nav>
+        <div class="header-container">
+            <h1 id="course-title">WDD 131 – Dynamic Web Fundamentals</h1>
+            <nav>
+                <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+                <a href="https://byupw.instructure.com/" target="_blank">Canvas</a>
+                <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/37.6-7" target="_blank">Favorite
+                    Scripture</a>
+                <a href="#">Final Project</a>
+            </nav>
+        </div>
     </header>
+
     <main>
-        <h1>Sebastian Sosa</h1>
         <section class="card">
             <h2>About Me</h2>
-            <img src="images/me.jpg" alt="Photo of Sebastian Sosa">
-            <p>Hello, my name is Sebastián Sosa. I live in Utah and I'm originally from Mendoza, Argentina. I enjoy learning
-            programming, improving my English, and spending time with my family.</p>
+            <img src="images/me.jpg" alt="Photo of Sebastián Sosa">
+            <p>Hello, my name is Sebastián Sosa. I live in Utah and I'm originally from Mendoza, Argentina. I enjoy
+                learning programming, improving my English, and spending time with my family.</p>
         </section>
+
         <section class="card">
             <h2>My Country</h2>
-            <img src="images/mendoza-city.jpg" alt="city of mendoza">
-            <p>Argentina is a beautiful country with great cultural and natural diversity.
-            Mendoza, my hometown, is known for its mountains, vineyards, and friendly people.</p>
-
+            <img src="images/mendoza-city.jpg" alt="City of Mendoza">
+            <p>Argentina is a beautiful country with great cultural and natural diversity. Mendoza, my hometown, is
+                known for its mountains, vineyards, and friendly people.</p>
         </section>
+
         <section class="card">
-            <h2>Web Dev resources</h2>
+            <h2>Web Dev Resources</h2>
             <ul>
                 <li><a href="https://developer.mozilla.org/en-US/" target="_blank">MDN Web Docs</a></li>
                 <li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a></li>
                 <li><a href="https://css-tricks.com/" target="_blank">CSS-Tricks</a></li>
                 <li><a href="https://stackoverflow.com/" target="_blank">Stack Overflow</a></li>
             </ul>
-            
         </section>
     </main>
+
     <footer>
-        <p>© <span id="currentyear"></span> 🍇Sebastián Sosa🍇| Utah, USA</p>
+        <p>© <span id="currentyear"></span> 🍇 Sebastián Sosa 🍇 | Utah, USA</p>
         <p id="lastModified"></p>
     </footer>
-
-
-
 </body>
 
 </html>
