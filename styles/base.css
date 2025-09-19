@@ -91,6 +91,36 @@ h2 {
     font-family: "Roboto", sans-serif;
     font-weight: 700;
 }
+/* Estilo específico para listas dentro de tarjetas */
+.card ul {
+    list-style-type: disc;
+    /* puntos delante de cada item */
+    margin: 0.5rem 0 0 1.5rem;
+    /* separa la lista del título y sangría */
+    padding: 0;
+    text-align: left;
+    /* alinear texto a la izquierda dentro de la tarjeta */
+}
+
+.card ul li {
+    margin-bottom: 0.5rem;
+    /* espacio entre cada item */
+}
+
+.card ul li a {
+    color: #0056b3;
+    /* mismo azul que el nav */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.card ul li a:hover {
+    color: #ff6600;
+    /* mismo naranja hover del nav */
+    transform: translateX(5px);
+    /* efecto sutil de desplazamiento a la derecha */
+}
 
 /* ----------- Footer ----------- */
 footer {
