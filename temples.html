@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album</title>
+    <meta name="description"
+        content="WDD 131 Week 02 Assignment: build a responsive temple picture album page with a hamburger menu, multiple figure elements, and interactive JavaScript.">
+    <meta name="author" content="Juan Diego Sebastián Sosa">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
+    <script src="scripts/temples.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Temple Album</h1>
+        <!-- Hamburger Menu Button -->
+        <button id="menu-toggle" aria-label="Open Menu">☰</button>
+        <nav id="main-nav">
+            <a href="#">Home</a>
+            <a href="#">Old</a>
+            <a href="#">New</a>
+            <a href="#">Large</a>
+            <a href="#">Small</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Gallery of Temples</h2>
+
+        <figure>
+            <img src="images/mendoza-argentina-temple.jpg" alt="Mendoza Argentina Temple front view">
+            <figcaption>Mendoza Argentina Temple</figcaption>
+        </figure>
+        <figure>
+            <img src="images/mendoza-argentina-temple.jpg" alt="Mendoza Temple side angle">
+            <figcaption>Mendoza Argentina Temple</figcaption>
+        </figure>
+        <figure>
+            <img src="images/mendoza-argentina-temple.jpg" alt="Mendoza Temple at sunset">
+            <figcaption>Mendoza Argentina Temple</figcaption>
+        </figure>
+        <figure>
+            <img src="images/mendoza-argentina-temple.jpg" alt="Mendoza Temple with mountains">
+            <figcaption>Mendoza Argentina Temple</figcaption>
+        </figure>
+        <figure>
+            <img src="images/mendoza-argentina-temple.jpg" alt="Close-up of Mendoza Temple entrance">
+            <figcaption>Mendoza Argentina Temple</figcaption>
+        </figure>
+        <figure>
+            <img src="images/mendoza-argentina-temple.jpg" alt="Aerial view of Mendoza Temple">
+            <figcaption>Mendoza Argentina Temple</figcaption>
+        </figure>
+        <figure>
+            <img src="images/mendoza-argentina-temple.jpg" alt="Mendoza Temple garden">
+            <figcaption>Mendoza Argentina Temple</figcaption>
+        </figure>
+        <figure>
+            <img src="images/mendoza-argentina-temple.jpg" alt="Night view of Mendoza Temple">
+            <figcaption>Mendoza Argentina Temple</figcaption>
+        </figure>
+        <figure>
+            <img src="images/mendoza-argentina-temple.jpg" alt="Mendoza Temple detail architecture">
+            <figcaption>Mendoza Argentina Temple</figcaption>
+        </figure>
+    </main>
+
+    <footer>
+        <p>© <span id="currentyear"></span> 🍇 Sebastián Sosa 🍇 | Utah, USA</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
