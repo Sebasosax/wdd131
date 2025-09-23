@@ -1,0 +1,23 @@
+@media (min-width: 800px) {
+    .info-card {
+        width: 22%;
+    }
+
+    .info-container {
+        gap: 20px;
+    }
+
+    .hero-image img {
+        max-height: 400px;
+        object-fit: cover;
+    }
+
+    .climate h2::after {
+        content: " 🌤️";
+    }
+
+    body {
+        background-attachment: fixed;
+        /* parallax en pantallas grandes */
+    }
+}
