@@ -1,23 +1,35 @@
-@media (min-width: 800px) {
+@media screen and (min-width: 769px) {
+
+    /* Menú desktop */
+    #menu-toggle {
+        display: none;
+    }
+
+    nav {
+        display: flex !important;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+
+    /* Info cards */
     .info-card {
         width: 22%;
     }
 
-    .info-container {
-        gap: 20px;
-    }
-
+    /* Hero image */
     .hero-image img {
         max-height: 400px;
         object-fit: cover;
     }
 
-    .climate h2::after {
+    /* Clima */
+    .climate-card h2::after {
         content: " 🌤️";
-    }
-
-    body {
-        background-attachment: fixed;
-        /* parallax en pantallas grandes */
     }
 }
