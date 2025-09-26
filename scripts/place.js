@@ -10,11 +10,7 @@ menuToggle.addEventListener("click", () => {
 document.getElementById("currentyear").textContent = new Date().getFullYear();
 document.getElementById("lastModifiedDate").textContent = document.lastModified;
 
-// Datos estáticos de clima
-const temperature = 12; // en °C
-const windSpeed = 10;   // en km/h
-
-// Fórmula oficial de wind chill en °C
+// Función de wind chill
 function calculateWindChill(tempC, speedKmh) {
     return (
         13.12 +
@@ -24,13 +20,17 @@ function calculateWindChill(tempC, speedKmh) {
     ).toFixed(1);
 }
 
-// Mostrar clima
-document.getElementById("tempValue").textContent = `${temperature} °C`;
-document.getElementById("windSpeedValue").textContent = `${windSpeed} km/h`;
+// Datos estáticos de Mendoza
+const temperatureC = 10; // temperatura de ejemplo
+const windSpeedKmh = 15; // velocidad del viento de ejemplo
 
-if (temperature <= 10 && windSpeed > 4.8) {
+document.getElementById("tempValue").textContent = `${temperatureC} °C`;
+document.getElementById("windSpeedValue").textContent = `${windSpeedKmh} km/h`;
+
+// Wind chill solo si aplica
+if (temperatureC <= 10 && windSpeedKmh > 4.8) {
     document.getElementById("windChillValue").textContent =
-        calculateWindChill(temperature, windSpeed) + " °C";
+        calculateWindChill(temperatureC, windSpeedKmh) + " °C";
 } else {
     document.getElementById("windChillValue").textContent = "N/A";
 }

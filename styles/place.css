@@ -66,6 +66,7 @@ nav.show {
     width: 100%;
     height: auto;
     display: block;
+    aspect-ratio: 16 / 9;
 }
 
 .info-container {
@@ -90,11 +91,7 @@ nav.show {
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.climate-card h2 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
+    text-align: center;
 }
 
 footer {

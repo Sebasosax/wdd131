@@ -27,14 +27,16 @@
     </header>
 
     <main>
+        <!-- Hero image adaptable -->
         <section class="hero-image">
             <picture>
                 <source media="(min-width: 800px)" srcset="images/vineyard-large.webp">
                 <source media="(min-width: 400px)" srcset="images/vineyard-medium.webp">
-                <img src="images/vineyard-small.webp" alt="Vineyards in Mendoza, Argentina">
+                <img src="images/vineyard-small.webp" alt="Vineyards in Mendoza, Argentina" width="500" height="300">
             </picture>
         </section>
 
+        <!-- Info cards -->
         <section class="info-container">
             <div class="info-card">
                 <h3>Area</h3>
@@ -62,9 +64,9 @@
             </div>
         </section>
 
-        <!-- Clima / Weather section -->
+        <!-- Climate section -->
         <section class="climate-card">
-            <h2>Climate <span class="weather-icon">⛅</span></h2>
+            <h2 class="weather-title">Climate</h2>
             <p id="wind-chill">Feels like: <span id="windChillValue"></span></p>
             <p id="temperature">Temperature: <span id="tempValue"></span></p>
             <p id="wind-speed">Wind: <span id="windSpeedValue"></span></p>

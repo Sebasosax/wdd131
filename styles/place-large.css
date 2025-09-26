@@ -19,15 +19,21 @@
         padding: 2rem;
     }
 
+
+    .weather-title::after {
+        content: " ⛅";
+        margin-left: 0.5rem;
+        font-size: 1.5rem;
+    }
+
     .climate-card {
         margin: 2rem auto;
         max-width: 600px;
-        text-align: center;
     }
+}
 
-    .climate-card h2::after {
-        content: " ⛅";
-        font-size: 1.5rem;
-        margin-left: 0.5rem;
+@media (max-width: 799px) {
+    .weather-title::after {
+        content: "";
     }
 }
