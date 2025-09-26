@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mendoza Facts</title>
     <meta name="description"
-        content="WDD 131 Week 03 Assignment: a responsive page about Mendoza, Argentina with images, local climate, and key facts like area, population, capital, languages, time zone, and calling code.">
+        content="WDD 131 Week 03 Assignment: a responsive page about Mendoza, Argentina with images, local climate, and key facts.">
     <meta name="author" content="Juan Diego Sebastián Sosa">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/place.css">
@@ -27,16 +27,14 @@
     </header>
 
     <main>
-        <!-- Hero image adaptable -->
         <section class="hero-image">
             <picture>
-                <source media="(min-width: 800px)" srcset="images/mendoza-large.webp">
-                <source media="(min-width: 400px)" srcset="images/mendoza-medium.webp">
-                <img src="images/vinedos.webp" alt="Vista panorámica de Mendoza">
+                <source media="(min-width: 800px)" srcset="images/vineyard-large.webp">
+                <source media="(min-width: 400px)" srcset="images/vineyard-medium.webp">
+                <img src="images/vineyard-small.webp" alt="Vineyards in Mendoza, Argentina">
             </picture>
         </section>
 
-        <!-- Info cards -->
         <section class="info-container">
             <div class="info-card">
                 <h3>Area</h3>
@@ -56,7 +54,7 @@
             </div>
             <div class="info-card">
                 <h3>Time Zone</h3>
-                <p>ART (UTC -3)</p>
+                <p>ART (UTC −3)</p>
             </div>
             <div class="info-card">
                 <h3>Calling Code</h3>
@@ -64,17 +62,18 @@
             </div>
         </section>
 
-        <!-- Clima en cuadro -->
+        <!-- Clima / Weather section -->
         <section class="climate-card">
-            <h2>Climate ⛅</h2>
-            <p id="wind-chill">Feels like: </p>
-            <p id="temperature"></p>
+            <h2>Climate <span class="weather-icon">⛅</span></h2>
+            <p id="wind-chill">Feels like: <span id="windChillValue"></span></p>
+            <p id="temperature">Temperature: <span id="tempValue"></span></p>
+            <p id="wind-speed">Wind: <span id="windSpeedValue"></span></p>
         </section>
     </main>
 
     <footer>
-        <p>© <span id="currentyear"></span> 🍇 Sebastián Sosa 🍇 | Utah, USA</p>
-        <p id="lastModified"></p>
+        <p>© <span id="currentyear"></span> Sebastián Sosa | Mendoza, Argentina</p>
+        <p id="lastModified">Last Modified: <span id="lastModifiedDate"></span></p>
     </footer>
 </body>
 

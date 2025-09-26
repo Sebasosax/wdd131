@@ -1,6 +1,8 @@
-@media screen and (min-width: 769px) {
+@media (min-width: 800px) {
+    header {
+        flex-direction: row;
+    }
 
-    /* Menú desktop */
     #menu-toggle {
         display: none;
     }
@@ -8,28 +10,24 @@
     nav {
         display: flex !important;
         flex-direction: row;
-        gap: 1rem;
+        gap: 1.5rem;
+        margin-top: 0;
     }
 
-    main {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 1rem;
+    .info-container {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 2rem;
     }
 
-    /* Info cards */
-    .info-card {
-        width: 22%;
+    .climate-card {
+        margin: 2rem auto;
+        max-width: 600px;
+        text-align: center;
     }
 
-    /* Hero image */
-    .hero-image img {
-        max-height: 400px;
-        object-fit: cover;
-    }
-
-    /* Clima */
     .climate-card h2::after {
-        content: " 🌤️";
+        content: " ⛅";
+        font-size: 1.5rem;
+        margin-left: 0.5rem;
     }
 }
