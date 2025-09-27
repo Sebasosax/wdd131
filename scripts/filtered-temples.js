@@ -54,7 +54,7 @@ const temples = [
         location: "Mendoza, Argentina",
         dedicated: "2024-09-22",
         area: 14000,
-        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mendoza-argentina/400x250/mendoza-argentina-temple-exterior.jpg"
+        imageUrl: "https://www.churchofjesuschrist.org/imgs/af7pu96yy3qbqvv6nq1bz9p662c5coek29rsmtkp/full/640%2C/0/default"
     },
     {
         templeName: "San José Costa Rica",
