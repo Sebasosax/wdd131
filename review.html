@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Juan Diego Sebastián Sosa">
+    <meta name="description" content="Review Confirmation Page - WDD131">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Confirmation</title>
+    <link rel="stylesheet" href="styles/form.css">
+    <style>
+        main {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .success-icon {
+            font-size: 4rem;
+            color: #4CAF50;
+            animation: pop 0.5s ease forwards;
+        }
+
+        @keyframes pop {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+
+            80% {
+                transform: scale(1.1);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .thank-you {
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: #4b2e83;
+            margin-top: 1rem;
+        }
+
+        #review-count {
+            margin-top: 1.5rem;
+            background: #f3f0fa;
+            display: inline-block;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 2rem;
+            color: white;
+            background: #4b2e83;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
+
+        a:hover {
+            background: #372260;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Review Submitted</h1>
+    </header>
+
+    <main>
+        <div class="success-icon">✅</div>
+        <p class="thank-you">Thank you for your feedback!</p>
+        <p>We appreciate your time and opinion — it helps us improve our products.</p>
+
+        <div id="review-count"></div>
+
+        <a href="form.html">Submit Another Review</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 🍇 Juan Diego Sebastián Sosa 🍇 | WDD131 Product Reviews</p>
+    </footer>
+
+    <script>
+        let reviewCount = Number(localStorage.getItem("reviewCount")) || 0;
+        reviewCount++;
+        localStorage.setItem("reviewCount", reviewCount);
+
+        document.getElementById("review-count").textContent =
+            `You have submitted ${reviewCount} review${reviewCount > 1 ? 's' : ''} so far.`;
+    </script>
+</body>
+
+</html>
