@@ -1,10 +1,7 @@
 :root {
     --primary: #A18CD1;
-    /* Plum Purple - header/footer */
     --secondary: #EDEAF6;
-    /* Soft background */
     --accent: #5B3E91;
-    /* Dark violet for text/accents */
     --font-main: 'Roboto', sans-serif;
 }
 
@@ -209,4 +206,10 @@ footer {
     .gallery img {
         height: 150px;
     }
+}
+
+/* Make all images responsive */
+img {
+    max-width: 100%;
+    height: auto;
 }
