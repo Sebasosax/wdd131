@@ -1,6 +1,3 @@
-/* ===============================
-   Global Styles
-================================= */
 :root {
     --primary: #A18CD1;
     /* Plum Purple - header/footer */
@@ -24,9 +21,7 @@ body {
     line-height: 1.6;
 }
 
-/* ===============================
-   Header
-================================= */
+/* Header */
 header {
     background-color: var(--primary);
     color: white;
@@ -42,29 +37,33 @@ header {
     padding: 0 1rem;
 }
 
+.logo-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
 header img {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     object-fit: cover;
 }
 
 header h1 {
     font-weight: 700;
-    font-size: 1.8rem;
-    margin-left: 0.5rem;
+    font-size: 1.5rem;
 }
 
-/* ===============================
-   Navigation
-================================= */
+/* Navigation */
+nav {
+    position: relative;
+}
+
 nav ul {
     display: flex;
     list-style: none;
-}
-
-nav ul li {
-    margin: 0 0.8rem;
+    gap: 1rem;
 }
 
 nav ul li a {
@@ -78,9 +77,21 @@ nav ul li a:hover {
     color: var(--secondary);
 }
 
-/* ===============================
-   Hero Section (Full-Width)
-================================= */
+/* Hamburger */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+}
+
+/* Hero */
 .hero {
     position: relative;
     width: 100vw;
@@ -91,8 +102,6 @@ nav ul li a:hover {
     width: 100%;
     height: 400px;
     object-fit: cover;
-    display: block;
-    border-radius: 0;
 }
 
 .hero-text {
@@ -108,9 +117,7 @@ nav ul li a:hover {
     border-radius: 10px;
 }
 
-/* ===============================
-   Main Section
-================================= */
+/* Main */
 main {
     max-width: 900px;
     margin: 2rem auto;
@@ -128,9 +135,7 @@ p {
     margin-bottom: 1.2rem;
 }
 
-/* ===============================
-   Gallery Section
-================================= */
+/* Gallery */
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -152,9 +157,7 @@ p {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* ===============================
-   Footer
-================================= */
+/* Footer */
 footer {
     background-color: var(--primary);
     color: var(--secondary);
@@ -163,28 +166,34 @@ footer {
     font-size: 0.9rem;
 }
 
-/* ===============================
-   Button Style (optional)
-================================= */
-button {
-    background-color: var(--primary);
-    color: white;
-    border: none;
-    padding: 0.6rem 1.2rem;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #8662b0;
-}
-
-/* ===============================
-   Responsive Design
-================================= */
+/* Responsive */
 @media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 0.5rem;
+        background-color: var(--primary);
+        position: absolute;
+        top: 60px;
+        right: 1rem;
+        width: 150px;
+        border-radius: 5px;
+        padding: 0.5rem 0;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
     .hero img {
         height: 250px;
     }
@@ -195,16 +204,6 @@ button:hover {
 
     .hero-text p {
         font-size: 0.9rem;
-    }
-
-    .header-container {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 0.5rem;
     }
 
     .gallery img {

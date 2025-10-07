@@ -1,27 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("🍽️ Welcome to Doña Betty Empanadas! Enjoy browsing our menu.");
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("nav-links");
 
+    hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+    });
+
+    // Resaltar link actual
     const currentPage = window.location.pathname.split("/").pop();
-    const navLinks = document.querySelectorAll("nav ul li a");
-
-    navLinks.forEach(link => {
+    navLinks.querySelectorAll("a").forEach(link => {
         if (link.getAttribute("href") === currentPage) {
             link.style.textDecoration = "underline";
             link.style.textDecorationColor = "#EDEAF6";
         }
     });
 
-    const smoothLinks = document.querySelectorAll('a[href^="#"]');
-    smoothLinks.forEach(link => {
-        link.addEventListener("click", e => {
-            e.preventDefault();
-            const target = document.querySelector(link.getAttribute("href"));
-            if (target) {
-                target.scrollIntoView({ behavior: "smooth" });
-            }
-        });
-    });
-
+    // Botón back to top
     const topBtn = document.createElement("button");
     topBtn.textContent = "↑ Top";
     topBtn.id = "back-to-top";
@@ -42,9 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.addEventListener("scroll", () => {
         topBtn.style.display = window.scrollY > 300 ? "block" : "none";
-        const header = document.querySelector("header");
-        header.style.backgroundColor = window.scrollY > 50 ? "#8662b0" : "#A18CD1";
-        header.style.transition = "background-color 0.3s";
     });
 
     topBtn.addEventListener("click", () => {
