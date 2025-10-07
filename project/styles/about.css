@@ -1,0 +1,213 @@
+/* ===============================
+   Global Styles
+================================= */
+:root {
+    --primary: #A18CD1;
+    /* Plum Purple - header/footer */
+    --secondary: #EDEAF6;
+    /* Soft background */
+    --accent: #5B3E91;
+    /* Dark violet for text/accents */
+    --font-main: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--secondary);
+    color: var(--accent);
+    line-height: 1.6;
+}
+
+/* ===============================
+   Header
+================================= */
+header {
+    background-color: var(--primary);
+    color: white;
+    padding: 1rem 0;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+header img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+header h1 {
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-left: 0.5rem;
+}
+
+/* ===============================
+   Navigation
+================================= */
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 0.8rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--secondary);
+}
+
+/* ===============================
+   Hero Section (Full-Width)
+================================= */
+.hero {
+    position: relative;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    border-radius: 0;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+}
+
+/* ===============================
+   Main Section
+================================= */
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+h1,
+h2 {
+    color: var(--primary);
+    margin-bottom: 0.8rem;
+}
+
+p {
+    margin-bottom: 1.2rem;
+}
+
+/* ===============================
+   Gallery Section
+================================= */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ===============================
+   Footer
+================================= */
+footer {
+    background-color: var(--primary);
+    color: var(--secondary);
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+/* ===============================
+   Button Style (optional)
+================================= */
+button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #8662b0;
+}
+
+/* ===============================
+   Responsive Design
+================================= */
+@media (max-width: 768px) {
+    .hero img {
+        height: 250px;
+    }
+
+    .hero-text h2 {
+        font-size: 1.4rem;
+    }
+
+    .hero-text p {
+        font-size: 0.9rem;
+    }
+
+    .header-container {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .gallery img {
+        height: 150px;
+    }
+}
