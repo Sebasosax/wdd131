@@ -1,11 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
+    // ===== Hamburger Menu =====
     const hamburger = document.getElementById("hamburger");
     const navLinks = document.getElementById("nav-links");
-    const formBox = document.getElementById("form-box"); // Caja de suscripción
 
-    // ===============================
-    // Toggle menú hamburguesa
-    // ===============================
     hamburger.addEventListener("click", () => {
         navLinks.classList.toggle("show");
         hamburger.classList.toggle("active");
@@ -18,9 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // ===============================
-    // Resaltar link de la página actual
-    // ===============================
+    // ===== Highlight Current Page =====
     const currentPage = window.location.pathname.split("/").pop();
     navLinks.querySelectorAll("a").forEach(link => {
         if (link.getAttribute("href") === currentPage) {
@@ -29,9 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // ===============================
-    // Botón Back to Top
-    // ===============================
+    // ===== Back to Top Button =====
     const topBtn = document.createElement("button");
     topBtn.textContent = "↑ Top";
     topBtn.id = "back-to-top";
@@ -62,59 +55,44 @@ document.addEventListener("DOMContentLoaded", () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
     });
 
-    // ===============================
-    // Efecto "resaltar" form box al entrar en viewport
-    // ===============================
-    if (formBox) {
+    // ===== Highlight Contact Box on Scroll =====
+    const contactBox = document.querySelector(".contact-box");
+    if (contactBox) {
         const observer = new IntersectionObserver(
-            (entries) => {
+            entries => {
                 entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        formBox.style.transform = "scale(1.05)";
-                        formBox.style.transition = "transform 0.5s ease";
-                    } else {
-                        formBox.style.transform = "scale(1)";
-                    }
+                    contactBox.style.transform = entry.isIntersecting ? "scale(1.05)" : "scale(1)";
+                    contactBox.style.transition = "transform 0.5s ease";
                 });
             },
             { threshold: 0.5 }
         );
-        observer.observe(formBox);
+        observer.observe(contactBox);
     }
 
-    // ===============================
-    // Feedback de formulario
-    // ===============================
-    const contactForm = document.getElementById("contact-form");
+    // ===== Newsletter Form =====
+    const form = document.getElementById("contact-form");
+    form.addEventListener("submit", e => {
+        e.preventDefault();
 
-    if (contactForm) {
-        const msgContainer = document.createElement("div");
-        msgContainer.id = "form-message";
-        msgContainer.style.marginTop = "1rem";
-        msgContainer.style.color = "white";
-        msgContainer.style.backgroundColor = "#d07a2a";
-        msgContainer.style.padding = "1rem";
-        msgContainer.style.borderRadius = "8px";
-        msgContainer.style.display = "none";
-        contactForm.appendChild(msgContainer);
+        const name = form.name.value.trim();
+        const email = form.email.value.trim();
+        const phone = form.phone.value.trim();
+        const experience = form.experience.value.trim();
 
-        contactForm.addEventListener("submit", function (e) {
-            e.preventDefault(); // Evita recargar la página
+        if (!name || !email) {
+            alert("Please fill in the required fields.");
+            return;
+        }
 
-            // Mostrar mensaje de agradecimiento
-            msgContainer.textContent = "Thank you! You are now subscribed to our promotions!";
-            msgContainer.style.display = "block";
+        // Save in localStorage
+        let subscribers = JSON.parse(localStorage.getItem("subscribers")) || [];
+        subscribers.push({ name, email, phone, experience });
+        localStorage.setItem("subscribers", JSON.stringify(subscribers));
 
-            // Limpiar campos
-            contactForm.reset();
-
-            // Scroll al mensaje
-            msgContainer.scrollIntoView({ behavior: "smooth", block: "center" });
-
-            // Ocultar mensaje después de 5 segundos
-            setTimeout(() => {
-                msgContainer.style.display = "none";
-            }, 5000);
-        });
-    }
+        // Show thank you message
+        form.innerHTML = `<p style="text-align:center; font-weight:bold; color:var(--primary);">
+            Thank you, ${name}! You have successfully subscribed to our newsletter.
+        </p>`;
+    });
 });
