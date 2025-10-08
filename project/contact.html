@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doña Betty Empanadas - Contact</title>
+    <meta name="description" content="Contact Doña Betty Empanadas">
+    <meta name="author" content="Juan Diego Sebastian Sosa">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/restaurant.css">
+    <script src="scripts/restaurant.js" defer></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo-title">
+                <img src="images/logo.webp" alt="Doña Betty Logo">
+                <h1>Doña Betty Empanadas</h1>
+            </div>
+            <nav>
+                <div class="hamburger" id="hamburger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <ul id="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="menu.html">Menu & Specials</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="images/empanada-hero.webp" alt="Fresh Empanadas" loading="lazy">
+        <div class="hero-text">
+            <h2>Contact Us & Get Exclusive Promotions!</h2>
+            <p>Join our mailing list to receive news, discounts, and special offers from Doña Betty Empanadas.</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <section class="contact-section">
+            <div class="contact-container">
+
+                <!-- Contact Info -->
+                <div id="contact-info" class="contact-info-box">
+                    <h3>Contact Information</h3>
+                    <p><strong>Phone:</strong> +54 9 261 123-4567</p>
+                    <p><strong>Email:</strong> info@donabetty.com</p>
+                    <p><strong>Address:</strong>
+                        <a href="https://maps.app.goo.gl/4qWgoNfpVUkcvffp6" target="_blank" rel="noopener noreferrer">
+                            Pedro Vargas 2037, Mendoza, Argentina
+                        </a>
+                    </p>
+                </div>
+
+                <!-- Form Box -->
+                <div id="form-box" class="contact-box">
+                    <h3>Join Our Newsletter!</h3>
+                    <p>Subscribe to get news, promotions, and exclusive discounts.</p>
+                    <form id="contact-form" action="#" method="post">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Your Phone Number">
+
+                        <label for="experience">Your Experiences</label>
+                        <textarea id="experience" name="experience" placeholder="Write about your experience..."
+                            rows="4"></textarea>
+
+                        <button type="submit" class="btn">Join Now</button>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Doña Betty Empanadas | Designed by Juan Diego Sebastian Sosa</p>
+    </footer>
+</body>
+
+</html>
