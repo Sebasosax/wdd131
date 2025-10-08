@@ -422,3 +422,12 @@ footer {
         align-items: center;
     }
 }
+.hamburger {
+    z-index: 1100;
+    /* Asegura que el botón hamburguesa quede arriba */
+}
+
+nav ul {
+    z-index: 1000;
+    /* Asegura que el menú desplegable quede por encima del hero */
+}
