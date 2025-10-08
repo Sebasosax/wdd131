@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     hamburger.addEventListener("click", () => {
         navLinks.classList.toggle("show");
+        hamburger.classList.toggle("active");
     });
 
     // Resaltar link actual
@@ -42,4 +43,3 @@ document.addEventListener("DOMContentLoaded", () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
     });
 });
-

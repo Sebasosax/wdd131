@@ -1,7 +1,10 @@
 :root {
     --primary: #A18CD1;
+    /* Plum Purple - header/footer */
     --secondary: #EDEAF6;
+    /* Soft background */
     --accent: #5B3E91;
+    /* Dark violet for text/accents */
     --font-main: 'Roboto', sans-serif;
 }
 
@@ -83,9 +86,22 @@ nav ul li a:hover {
 }
 
 .hamburger div {
-    width: 25px;
-    height: 3px;
+    width: 30px;
+    height: 4px;
     background-color: white;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active div:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
 }
 
 /* Hero */
@@ -178,13 +194,14 @@ footer {
         position: absolute;
         top: 60px;
         right: 1rem;
-        width: 150px;
+        width: 180px;
         border-radius: 5px;
         padding: 0.5rem 0;
+        z-index: 999;
     }
 
     nav ul.show {
-        display: flex;
+        display: flex !important;
     }
 
     .hamburger {
