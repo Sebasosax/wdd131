@@ -2,12 +2,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const hamburger = document.getElementById("hamburger");
     const navLinks = document.getElementById("nav-links");
 
+    // Toggle menú hamburguesa
     hamburger.addEventListener("click", () => {
         navLinks.classList.toggle("show");
         hamburger.classList.toggle("active");
     });
 
-    // Resaltar link actual
+    // Resaltar link de la página actual
     const currentPage = window.location.pathname.split("/").pop();
     navLinks.querySelectorAll("a").forEach(link => {
         if (link.getAttribute("href") === currentPage) {
@@ -16,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Botón back to top
+    // Botón Back to Top
     const topBtn = document.createElement("button");
     topBtn.textContent = "↑ Top";
     topBtn.id = "back-to-top";
@@ -43,3 +44,4 @@ document.addEventListener("DOMContentLoaded", () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
     });
 });
+

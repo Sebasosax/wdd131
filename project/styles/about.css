@@ -1,3 +1,6 @@
+/* ===============================
+   Variables globales
+================================= */
 :root {
     --primary: #A18CD1;
     /* Plum Purple - header/footer */
@@ -8,6 +11,9 @@
     --font-main: 'Roboto', sans-serif;
 }
 
+/* ===============================
+   Reset básico
+================================= */
 * {
     margin: 0;
     padding: 0;
@@ -21,7 +27,9 @@ body {
     line-height: 1.6;
 }
 
-/* Header */
+/* ===============================
+   Header
+================================= */
 header {
     background-color: var(--primary);
     color: white;
@@ -55,7 +63,9 @@ header h1 {
     font-size: 1.5rem;
 }
 
-/* Navigation */
+/* ===============================
+   Navigation
+================================= */
 nav {
     position: relative;
 }
@@ -77,7 +87,9 @@ nav ul li a:hover {
     color: var(--secondary);
 }
 
-/* Hamburger */
+/* ===============================
+   Hamburger
+================================= */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -86,10 +98,9 @@ nav ul li a:hover {
 }
 
 .hamburger div {
-    width: 30px;
-    height: 4px;
+    width: 25px;
+    height: 3px;
     background-color: white;
-    transition: all 0.3s ease;
 }
 
 .hamburger.active div:nth-child(1) {
@@ -101,10 +112,12 @@ nav ul li a:hover {
 }
 
 .hamburger.active div:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
+    transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Hero */
+/* ===============================
+   Hero
+================================= */
 .hero {
     position: relative;
     width: 100vw;
@@ -125,12 +138,15 @@ nav ul li a:hover {
     color: white;
     text-align: center;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.35);
     padding: 1rem 2rem;
     border-radius: 10px;
+    max-width: 90%;
 }
 
-/* Main */
+/* ===============================
+   Main Content
+================================= */
 main {
     max-width: 900px;
     margin: 2rem auto;
@@ -148,7 +164,9 @@ p {
     margin-bottom: 1.2rem;
 }
 
-/* Gallery */
+/* ===============================
+   Gallery
+================================= */
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -170,7 +188,9 @@ p {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Footer */
+/* ===============================
+   Footer
+================================= */
 footer {
     background-color: var(--primary);
     color: var(--secondary);
@@ -179,7 +199,9 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Responsive */
+/* ===============================
+   Responsive
+================================= */
 @media (max-width: 768px) {
     .header-container {
         flex-direction: column;
@@ -190,10 +212,10 @@ footer {
         display: none;
         flex-direction: column;
         gap: 0.5rem;
-        background-color: var(--primary);
+        background-color: rgba(161, 140, 209, 0.95);
         position: absolute;
         top: 60px;
-        right: 1rem;
+        right: 0.5rem;
         width: 180px;
         border-radius: 5px;
         padding: 0.5rem 0;
@@ -225,7 +247,7 @@ footer {
     }
 }
 
-/* Make all images responsive */
+/* Hacer todas las imágenes responsivas */
 img {
     max-width: 100%;
     height: auto;
