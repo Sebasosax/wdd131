@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doña Betty Empanadas - Contact</title>
-    <meta name="description" content="Contact Doña Betty Empanadas">
+    <meta name="description" content="Contact Doña Betty Empanadas for orders or inquiries">
     <meta name="author" content="Juan Diego Sebastian Sosa">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/restaurant.css">
@@ -13,6 +13,7 @@
 </head>
 
 <body>
+
     <!-- Header -->
     <header>
         <div class="header-container">
@@ -29,7 +30,7 @@
                 <ul id="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
-                    <li><a href="menu.html">Menu & Specials</a></li>
+                    <li><a href="menu.html">Menu</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </nav>
@@ -38,60 +39,77 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <img src="images/empanada-hero.webp" alt="Fresh Empanadas" loading="lazy">
+        <img src="images/contact-hero.webp" alt="Contact Us" loading="lazy">
         <div class="hero-text">
-            <h2>Contact Us & Get Exclusive Promotions!</h2>
-            <p>Join our mailing list to receive news, discounts, and special offers from Doña Betty Empanadas.</p>
+            <h2>Contact Us</h2>
+            <p>We love hearing from our customers! Reach out for questions or orders.</p>
         </div>
     </section>
 
-    <!-- Main Content -->
+    <!-- Contact Section -->
     <main>
         <section class="contact-section">
-            <div class="contact-container">
-
-                <!-- Contact Info -->
-                <div id="contact-info" class="contact-info-box">
-                    <h3>Contact Information</h3>
-                    <p><strong>Phone:</strong> +54 9 261 123-4567</p>
-                    <p><strong>Email:</strong> info@donabetty.com</p>
-                    <p><strong>Address:</strong>
-                        <a href="https://maps.app.goo.gl/4qWgoNfpVUkcvffp6" target="_blank" rel="noopener noreferrer">
-                            Pedro Vargas 2037, Mendoza, Argentina
-                        </a>
-                    </p>
-                </div>
-
-                <!-- Form Box -->
-                <div id="form-box" class="contact-box">
-                    <h3>Join Our Newsletter!</h3>
-                    <p>Subscribe to get news, promotions, and exclusive discounts.</p>
-                    <form id="contact-form" action="#" method="post">
-                        <label for="name">Name *</label>
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
-
-                        <label for="email">Email *</label>
-                        <input type="email" id="email" name="email" placeholder="Your Email" required>
-
-                        <label for="phone">Phone</label>
-                        <input type="tel" id="phone" name="phone" placeholder="Your Phone Number">
-
-                        <label for="experience">Your Experiences</label>
-                        <textarea id="experience" name="experience" placeholder="Write about your experience..."
-                            rows="4"></textarea>
-
-                        <button type="submit" class="btn">Join Now</button>
-                    </form>
-                </div>
-
+    
+            <!-- Contact Info Boxes -->
+            <div class="contact-info-box">
+                <h3>Visit Us</h3>
+                <p>
+                    <a href="https://maps.app.goo.gl/4qWgoNfpVUkcvffp6" target="_blank" rel="noopener noreferrer">
+                        Pedro Varga 2037, Mendoza, Argentina
+                    </a>
+                </p>
+                <img src="images/location.webp" alt="Location of Doña Betty Empanadas" loading="lazy">
             </div>
+    
+            <div class="contact-info-box">
+                <h3>Call Us</h3>
+                <p>+54 261 123 4567</p>
+                <img src="images/phone.webp" alt="Phone icon" loading="lazy">
+            </div>
+    
+            <div class="contact-info-box">
+                <h3>Email</h3>
+                <p>info@donabetty.com</p>
+                <img src="images/email.webp" alt="Email icon" loading="lazy">
+            </div>
+    
+            <!-- Contact Form -->
+            <div class="contact-box">
+                <h3>Send us a Message</h3>
+                <form id="contact-form">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" required>
+    
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+    
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone">
+    
+                    <label for="experience">Your Message</label>
+                    <textarea id="experience" name="experience" rows="4"
+                        placeholder="Write your message here..."></textarea>
+    
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+            </div>
+    
         </section>
     </main>
 
     <!-- Footer -->
     <footer>
         <p>© 2025 Doña Betty Empanadas | Designed by Juan Diego Sebastian Sosa</p>
+        <div class="footer-social">
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                <img src="images/facebook.jpg" alt="Facebook" />
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                <img src="images/instagram.jpg" alt="Instagram" />
+            </a>
+        </div>
     </footer>
+
 </body>
 
 </html>

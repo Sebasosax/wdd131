@@ -70,29 +70,55 @@ document.addEventListener("DOMContentLoaded", () => {
         observer.observe(contactBox);
     }
 
-    // ===== Newsletter Form =====
-    const form = document.getElementById("contact-form");
-    form.addEventListener("submit", e => {
-        e.preventDefault();
-
-        const name = form.name.value.trim();
-        const email = form.email.value.trim();
-        const phone = form.phone.value.trim();
-        const experience = form.experience.value.trim();
-
-        if (!name || !email) {
-            alert("Please fill in the required fields.");
-            return;
-        }
-
-        // Save in localStorage
-        let subscribers = JSON.parse(localStorage.getItem("subscribers")) || [];
-        subscribers.push({ name, email, phone, experience });
-        localStorage.setItem("subscribers", JSON.stringify(subscribers));
-
-        // Show thank you message
-        form.innerHTML = `<p style="text-align:center; font-weight:bold; color:var(--primary);">
-            Thank you, ${name}! You have successfully subscribed to our newsletter.
-        </p>`;
+    // ===== Gallery Image Hover (About Page) =====
+    const galleryBoxes = document.querySelectorAll(".gallery .image-box");
+    galleryBoxes.forEach(box => {
+        box.addEventListener("mouseover", () => {
+            box.style.transform = "scale(1.05)";
+            box.style.transition = "transform 0.3s ease";
+        });
+        box.addEventListener("mouseout", () => {
+            box.style.transform = "scale(1)";
+        });
     });
+
+    // ===== Contact Form =====
+    const form = document.getElementById("contact-form");
+    if (form) {
+        form.addEventListener("submit", e => {
+            e.preventDefault();
+
+            const name = form.name.value.trim();
+            const email = form.email.value.trim();
+            const phone = form.phone.value.trim();
+            const message = form.experience.value.trim();
+
+            if (!name || !email) {
+                alert("Please fill in the required fields.");
+                return;
+            }
+
+            // Save in localStorage
+            let subscribers = JSON.parse(localStorage.getItem("subscribers")) || [];
+            subscribers.push({ name, email, phone, message });
+            localStorage.setItem("subscribers", JSON.stringify(subscribers));
+
+            // Show thank you message in a styled box
+            form.innerHTML = `
+                <div style="
+                    background-color: #ffe8cc;
+                    border: 2px solid #a35b28;
+                    padding: 2rem;
+                    border-radius: 10px;
+                    text-align: center;
+                    font-weight: bold;
+                    color: #592e10;
+                ">
+                    Thank you, ${name}!<br>
+                    Your message has been successfully sent.<br>
+                    We appreciate your interest and will get back to you shortly.
+                </div>
+            `;
+        });
+    }
 });
